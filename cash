@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<cs50.h>
+#include<math.h>
+int main(void)
+{
+    int n ;
+    
+    do
+    {
+        n = get_int( "enter total coint in. \n ");
+    } while(n<1);
+    
+    int i = 0;
+    while( n - (25*i) >= 25)
+    i++;
+    printf("the value of coin 25 are %i\n" , i);
+     
+     int a = n % 25;
+     
+     
+     int j = 0;
+     while( a - (10*j)  >= 10)
+     j++;
+     printf( "the value of 10  coins are %i\n",  j);
+    int  b  = a % 10;
+
+    int k = 0;
+    while(b - (5*k)  >= 5)
+    k++;
+    printf( " the value of 5 coins are %i\n",k);
+    int c= b % 5;
+
+        int l = 0;
+        while( c - (2*l) >= 2)
+        l++;
+        printf( "the value of 2 coins are %i\n", l);
+        int d = c%2;
+        
+
+        int m = 0;
+        while( d- (1*m) >= 1)
+        m++;
+        printf( " the value of 1 coins are %i\n",m);
+
+
+
+        int total = i+j+k+l+m;
+        printf("total are%i\n", total);
+      
+}
